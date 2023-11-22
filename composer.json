@@ -1,0 +1,51 @@
+{
+    "name": "tomatophp/tomato-ecommerce",
+    "type": "library",
+    "description": "a full ecommerce frontend functions for TomatoPHP",
+    "keywords": [
+        "php",
+        "laravel",
+        "ecommerce",
+        "frontend",
+        "tomatophp",
+        "ordering",
+        "cart",
+        "checkout"
+    ],
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "TomatoPHP\\TomatoEcommerce\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "TomatoPHP\\TomatoEcommerce\\TomatoEcommerceServiceProvider"
+            ]
+        }
+    },
+    "authors": [
+        {
+            "name": "Fady Mondy",
+            "email": "info@3x1.io"
+        }
+    ],
+    "require": {
+        "php": "^8.1|^8.2",
+        "tomatophp/console-helpers": "^1.1",
+        "tomatophp/tomato-orders": "^1.0",
+        "tomatophp/tomato-crm": "^1.1",
+        "tomatophp/tomato-menus": "^1.1",
+        "tomatophp/tomato-translations": "^1.1",
+        "tomatophp/tomato-cms": "^1.1",
+        "tomatophp/tomato-products": "^1.0",
+        "tomatophp/tomato-coupons": "^1.0",
+        "tomatophp/tomato-category": "^1.1"
+    }
+}
