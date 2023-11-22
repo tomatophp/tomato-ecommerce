@@ -1,6 +1,6 @@
 # Tomato ecommerce
 
-your package description will go here
+a full ecommerce frontend functions for TomatoPHP
 
 ## Installation
 
