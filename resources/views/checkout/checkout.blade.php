@@ -40,7 +40,7 @@
                     <div class="relative" @click.prevnt="form.shipper_id = @js($shipper->id)">
                         <span v-bind:class="{'border-gray-700':form.shipper_id === @js($shipper->id)}" class="absolute right-4 top-1/2 box-content block h-3 w-3 -translate-y-1/2 rounded-full border-8 border-gray-300 bg-white"></span>
                         <label v-bind:class="{'border-2 border-gray-700 bg-gray-50':form.shipper_id === @js($shipper->id)}" class="flex cursor-pointer select-none rounded-lg border border-gray-300 p-4">
-                            <div class="w-14 h-14 bg-center bg-contain rounded-lg border" style="background-image: url('{{$shipper->getMedia('logo')?->first()->getUrl() ?? url('placeholder.webp')}}')">
+                            <div class="w-14 h-14 bg-center bg-contain rounded-lg border" style="background-image: url('{{$shipper->getMedia('logo')?->first()?->getUrl() ?? url('placeholder.webp')}}')">
 
                             </div>
                             <div class="ml-5">
