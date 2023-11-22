@@ -46,6 +46,7 @@
         "tomatophp/tomato-cms": "^1.1",
         "tomatophp/tomato-products": "^1.0",
         "tomatophp/tomato-coupons": "^1.0",
+        "tomatophp/tomato-wallet": "^1.0",
         "tomatophp/tomato-category": "^1.1"
     }
 }
