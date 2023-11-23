@@ -2,43 +2,12 @@
 
 # Tomato E-Commerce
 
-a full frontend/backend e-commerce system build in top of TomatoPHP, with Cart functions and ordering functions
+a full frontend/backend e-commerce system built on top of TomatoPHP, with Cart functions and ordering functions
 
 ## Installation
 
 ```bash
 composer require tomatophp/tomato-ecommerce
-```
-after install your package please run this command
-
-```bash
-php artisan tomato-ecommerce:install
-```
-
-## Publish Assets
-
-you can publish config file by use this command
-
-```bash
-php artisan vendor:publish --tag="tomato-ecommerce-config"
-```
-
-you can publish views file by use this command
-
-```bash
-php artisan vendor:publish --tag="tomato-ecommerce-views"
-```
-
-you can publish languages file by use this command
-
-```bash
-php artisan vendor:publish --tag="tomato-ecommerce-lang"
-```
-
-you can publish migrations file by use this command
-
-```bash
-php artisan vendor:publish --tag="tomato-ecommerce-migrations"
 ```
 
 ## Support

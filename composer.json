@@ -1,7 +1,7 @@
 {
     "name": "tomatophp/tomato-ecommerce",
     "type": "library",
-    "description": "a full frontend/backend e-commerce system build in top of TomatoPHP, with Cart functions and ordering functions",
+    "description": "a full frontend/backend e-commerce system built on top of TomatoPHP, with Cart functions and ordering functions",
     "keywords": [
         "php",
         "laravel",
