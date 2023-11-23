@@ -52,7 +52,7 @@
                             {{$order->address}}
                         </div>
                         <div class="text-sm">
-                            {{$order->country->name}} , {{$order->city->name}}, {{$order->area->name}}
+                            {{$order->country?->name}} , {{$order->city?->name}}, {{$order->area?->name}}
                         </div>
                     </div>
                 </div>
