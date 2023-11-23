@@ -1,6 +1,8 @@
-# Tomato ecommerce
+![Screenshot](https://github.com/tomatophp/tomato-ecommerce/blob/master/art/screenshot.png)
 
-a full ecommerce frontend functions for TomatoPHP
+# Tomato E-Commerce
+
+a full frontend/backend e-commerce system build in top of TomatoPHP, with Cart functions and ordering functions
 
 ## Installation
 
@@ -45,7 +47,7 @@ you can join our discord server to get support [TomatoPHP](https://discord.gg/VZ
 
 ## Docs
 
-you can check docs of this package on [Docs](https://docs.tomatophp.com/plugins/laravel-package-generator)
+you can check docs of this package on [Docs](https://docs.tomatophp.com/plugins/tomato-ecommerce)
 
 ## Changelog
 
