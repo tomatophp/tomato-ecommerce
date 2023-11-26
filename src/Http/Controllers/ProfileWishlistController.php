@@ -33,6 +33,11 @@ class ProfileWishlistController extends Controller
      */
     public function store(Request $request): RedirectResponse
     {
+        if(!auth('accounts')->user()){
+            Toast::danger(__('You must be logged in to add product to wishlist.'))->autoDismiss(2);
+            return redirect()->back();
+        }
+
         $request->validate([
             "product_id" => "required|integer|exists:products,id"
         ]);
