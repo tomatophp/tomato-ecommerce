@@ -5,8 +5,6 @@ namespace TomatoPHP\TomatoEcommerce\Console;
 use Illuminate\Console\Command;
 use TomatoPHP\ConsoleHelpers\Traits\RunCommand;
 
-use TomatoPHP\TomatoEcommerce\Services\TomatoEcommerceSectionsBuilder;
-
 class TomatoEcommerceInstall extends Command
 {
     use RunCommand;
@@ -41,7 +39,6 @@ class TomatoEcommerceInstall extends Command
         $this->info('Publish Vendor Assets');
         $this->artisanCommand(["migrate"]);
         $this->artisanCommand(["optimize:clear"]);
-        TomatoEcommerceSectionsBuilder::build();
         $this->info('Tomato Ecommerce installed successfully.');
     }
 }
