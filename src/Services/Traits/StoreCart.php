@@ -3,6 +3,7 @@
 namespace TomatoPHP\TomatoEcommerce\Services\Traits;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Cookie;
 use TomatoPHP\TomatoEcommerce\Models\Cart;
 use ProtoneMedia\Splade\Facades\Toast;
 use TomatoPHP\TomatoProducts\Models\Product;
@@ -20,11 +21,10 @@ trait StoreCart
                 'account_id' => auth('accounts')->user()->id
             ]);
         }
-        else {
-            $request->merge([
-                'session_id' => session()->getId()
-            ]);
-        }
+
+        $request->merge([
+            'session_id' => Cookie::get('cookieName')
+        ]);
 
 
         $product = Product::find($request->get('product_id'));
@@ -46,7 +46,6 @@ trait StoreCart
 
         $checkIFCartExists = Cart::where('product_id', $request->get('product_id'))
             ->where('session_id', $request->get('session_id'))
-            ->where('account_id', $request->get('account_id'))
             ->whereJsonContains('options', $request->get('options'))
             ->first();
 
