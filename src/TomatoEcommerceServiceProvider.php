@@ -3,6 +3,7 @@
 namespace TomatoPHP\TomatoEcommerce;
 
 use Illuminate\Support\ServiceProvider;
+use TomatoPHP\TomatoAdmin\Facade\TomatoSlot;
 
 include  __DIR__ . '/helpers.php';
 
@@ -56,5 +57,8 @@ class TomatoEcommerceServiceProvider extends ServiceProvider
         app()->bind('tomato-ecommerce', function () {
             return new \TomatoPHP\TomatoEcommerce\Services\Ecommerce;
         });
+
+        TomatoSlot::navBeforeUserDropdown('tomato-ecommerce::ecommerce.icon');
+
     }
 }
