@@ -447,13 +447,15 @@ class TomatoEcommerceInstall extends Command
         foreach ($roles as $role){
             $checkExists = Role::where('name', $role['name'])->first();
             if(!$checkExists){
-                $newRole = Role::create($role);
+                $newRole = Role::create([
+                    "name" => $role['name'],
+                    "guard_name" => "web"
+                ]);
                 if($newRole){
                     $this->info("Install ". $newRole->name . " Role");
                     foreach ($role['permissions'] as $permission){
                         $checkIfPermissionExists = \Spatie\Permission\Models\Permission::where('name', $permission)->first();
                         if(!$checkIfPermissionExists){
-                            dd('not!');
                             \Spatie\Permission\Models\Permission::create(['name' => $permission, 'guard_name' => 'web']);
                         }
                         $newRole->givePermissionTo($permission);
